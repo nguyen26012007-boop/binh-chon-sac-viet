@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Sắc Việt — Community Voting
 
 Website bình chọn cộng đồng bằng PHP, với trang quản trị nội dung, hồ sơ thí sinh và mã tham gia riêng của chương trình.
@@ -37,3 +38,6 @@ php -S 127.0.0.1:8080
 Mặc định bản chạy trực tiếp lưu dữ liệu bình chọn ngoài thư mục web, tại `ielts-zalo-data` cách thư mục dự án hai cấp. Đảm bảo tài khoản chạy PHP có quyền ghi tại đó và tại thư mục dự án để lưu nội dung admin.
 
 Các file cấu hình cũ, mật khẩu local, log, nội dung admin đã lưu, dữ liệu người dùng và gói build được loại khỏi repository. Mã nguồn Docker tạo file đăng nhập dùng secret môi trường khi build.
+=======
+# binh-chon-sac-viet
+>>>>>>> 414e8b0f50765e60e46174403427f0ef53f54952
