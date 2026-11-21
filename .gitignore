@@ -1,0 +1,33 @@
+# Local secrets and legacy connection credentials
+/admin_login.php
+/config.php
+/db.php
+# Unused files from the former landing page
+/app.js
+/admin.js
+/style.css
+/reset_session.php
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Runtime data, photos uploaded by administrators, and logs
+/site_data.json
+/uploads/
+/ielts-zalo-data/
+*.log
+
+# Generated deployment packages
+/deployment/railway/web/
+/deployment/railway/seed/
+/deployment/*.zip
+
+# Local tooling
+__pycache__/
+*.pyc
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

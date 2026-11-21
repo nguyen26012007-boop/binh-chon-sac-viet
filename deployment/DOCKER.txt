@@ -1,0 +1,17 @@
+Build from the project root:
+    docker build -t ielts-zalo .
+
+Railway:
+1. Use the repository root as the service root. Dockerfile is detected there.
+2. Attach a persistent volume at /var/www/data.
+3. Set ADMIN_PASSWORD_HASH in the service's secret environment variables.
+   Use PHP password_hash() to generate a hash for your chosen admin password.
+4. Deploy and generate a public HTTPS domain. Railway supplies PORT.
+
+The image packages current PHP sources, public assets and optional site content.
+The local plaintext admin password, legacy integrations and logs are excluded.
+Admin editing, votes and uploaded photos use the persistent volume.
+
+The production session cookies require HTTPS. Railway provides HTTPS domains.
+For localhost-only Docker testing, override session.cookie_secure=0 in a local
+PHP ini mount; keep the production setting enabled when exposing the website.
