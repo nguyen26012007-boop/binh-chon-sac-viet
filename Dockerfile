@@ -21,12 +21,6 @@ RUN a2dismod mpm_event mpm_worker || true \
 
 # Cấu hình thư mục làm việc
 WORKDIR /var/www/html
-
-# Copy toàn bộ mã nguồn vào thư mục web của Apache
-COPY . /var/www/html/
-
-# Tạo các thư mục cần thiết (data, uploads) và cấp quyền ghi (777)
-# Bắt buộc phải tạo thư mục trước khi chmod để tránh lỗi "No such file or directory"
 RUN mkdir -p /var/www/html/data /var/www/html/uploads \
     && chmod -R 777 /var/www/html/data /var/www/html/uploads
 
