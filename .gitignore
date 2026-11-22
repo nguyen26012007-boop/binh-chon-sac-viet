@@ -1,6 +1,5 @@
 # Local secrets and legacy connection credentials
 /admin_login.php
-/config.php
 /db.php
 # Unused files from the former landing page
 /app.js
