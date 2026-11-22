@@ -1,6 +1,7 @@
 # Include only the application and the deployment templates.
 **
 !Dockerfile
+!docker-start.sh
 !.dockerignore
 !index.php
 !home-view.php
