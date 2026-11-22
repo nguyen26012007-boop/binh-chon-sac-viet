@@ -7,6 +7,11 @@ RUN apt-get update \
     && docker-php-ext-install pdo pdo_mysql mbstring \
     && rm -rf /var/lib/apt/lists/*
 
+# Apache chỉ được phép load đúng một MPM (Apache must load exactly one MPM).
+# Tắt mpm_event/mpm_worker và bật mpm_prefork (tương thích với mod_php).
+RUN a2dismod mpm_event mpm_worker || true \
+    && a2enmod mpm_prefork
+
 # Cấu hình thư mục làm việc
 WORKDIR /var/www/html
 
